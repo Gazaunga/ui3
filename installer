@@ -54,28 +54,33 @@ ttf-symbola font-mathematica artwiz-fonts git pavucontrol
 youtube-dl zsh terminus-font connman wpa_supplican)
 
 # You know the thing
-pacaur -Syu $pkgs
+e_header "Let's update and install some packages!"
+pacaur -Syu --noconfirm $pkgs
 
 # Update fonts
+e_success "Updating fonts"
 fc-cache -v
 
 # Fancy
+e_underline "Some fancy terminal sugar"
 curl -sLf https://spacevim.org/install.sh | bash
 curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
 
 
 # Git stuff
+e_arrow "Loading stuff to make Git easier to use"
 git config --global user.name "Gazaunga"
 git config --global user.email "jeremy.ottley@gmail.com"
 git config --global core.autocrlf input
 git config --global core.safecrlf true
 
 # Clone dot files from github and move them
+e_warning "Moving dotfiles!"
 cd ~
-git clone https://github.com/Gazaunga/i3.git && cd i3
+git clone https://github.com/Gazaunga/ui3.git && cd ui3
 cp -rv .* ~/
 
 # Print something useful
-echo
-echo "...install complete, have fun!"
-echo
+e_bold "Finally finished."
+e_bold "Please double check your dotfiles.
+e_header "And don't forget to have fun!"
