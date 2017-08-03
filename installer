@@ -51,7 +51,7 @@ adobe-source-sans-pro-fonts rainbow source-highlight polkit lesspipe
 colormake-git prettyping ttf-font-awesome imagemagick neofetch-git
 ttf-hack ttf-ms-fonts ttf-ubuntu-font-family ttf-mac-fonts
 ttf-symbola font-mathematica artwiz-fonts git pavucontrol
-youtube-dl zsh terminus-font connman wpa_supplican)
+youtube-dl zsh terminus-font connman wpa_supplican exa-git)
 
 # You know the thing
 e_header "Let's update and install some packages!"
