@@ -30,11 +30,9 @@ then
   alias lstodo="rg --no-line-number ' *(\[.\].*\*)$' $NOTES_BASE_PATH/notes/todo.txt --replace '\$1' | sort"
   
   # Daily journal
-  # Currently set to a file per month, uncomment to make a file per day
   function journal() {
-    # today=$(date +"%m-%d-%y")
-    thismonth=$(date +"%m-%y")
-    # [ ! -f $file ] && echo "# $today" > $file
-    (cd $NOTES_BASE_PATH; nvim "journal/$thismonth.txt")
+    today=$(date +"%m-%d-%y")
+    [ ! -f $file ] && echo "# $today" > $file
+    (cd $NOTES_BASE_PATH; $EDITOR "journal/$today.txt")
   }
 fi
