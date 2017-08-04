@@ -43,19 +43,61 @@ e_note() { printf "${underline}${bold}${blue}Note:${reset}  ${blue}%s${reset}\n"
 ############################################################
 
 # Packages for the new installation
-pkgs=(ubo-icons glances screen neovim python-neovim
-python2-neovim ffmpeg mpv ranger mc rainbowstream pandoc
-rmlint telegram-cli-git cylon zathura okular ttf-google-fonts-git
-horst httping alot-git rtv neomutt-git adobe-source-code-pro-fonts
-adobe-source-sans-pro-fonts rainbow source-highlight polkit lesspipe
-colormake-git prettyping ttf-font-awesome imagemagick neofetch-git
-ttf-hack ttf-ms-fonts ttf-ubuntu-font-family ttf-mac-fonts
-ttf-symbola font-mathematica artwiz-fonts git pavucontrol
-youtube-dl zsh terminus-font connman wpa_supplican exa-git)
+pkgs=(ubo-icons 
+glances 
+screen 
+neovim 
+python-neovim
+python2-neovim 
+ffmpeg 
+mpv 
+ranger 
+mc 
+rainbowstream 
+pandoc
+rmlint 
+telegram-cli-git 
+cylon 
+zathura 
+okular 
+ttf-google-fonts-git
+horst 
+httping 
+alot-git 
+rtv 
+neomutt-git 
+adobe-source-code-pro-fonts
+adobe-source-sans-pro-fonts 
+rainbow 
+source-highlight 
+polkit 
+lesspipe
+colormake-git 
+prettyping 
+ttf-font-awesome 
+imagemagick 
+neofetch-git
+ttf-hack
+ttf-ms-fonts
+ttf-ubuntu-font-family
+ttf-mac-fonts
+ttf-symbola
+font-mathematica
+artwiz-fonts
+git
+pavucontrol
+youtube-dl
+zsh 
+terminus-font
+connman 
+wpa_supplican
+exa-git
+)
 
 # You know the thing
 e_header "Let's update and install some packages!"
-pacaur -Syu --noconfirm $pkgs
+#pacaur -Syu --noconfirm $pkgs
+pacaur -Syu --noconfirm ${pkgs[@]}
 
 # Update fonts
 e_success "Updating fonts"
@@ -80,7 +122,7 @@ git config --global core.safecrlf true
 e_warning "Moving dotfiles!"
 cd ~
 git clone https://github.com/Gazaunga/ui3.git && cd ui3
-cp -rv .* ~/
+cp -rv ~/.* ~/
 
 # Print something useful
 e_bold "Finally finished."
