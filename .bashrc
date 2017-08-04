@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Use Liquid Prompt (but not in interactive shells)
+[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
+
 # Source global definitions
 [ -f /etc/bashrc ] && source /etc/bashrc
 
