@@ -84,5 +84,5 @@ cp -rv .* ~/
 
 # Print something useful
 e_bold "Finally finished."
-e_bold "Please double check your dotfiles.
+e_bold "Please double check your dotfiles."
 e_header "And don't forget to have fun!"
