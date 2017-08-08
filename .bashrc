@@ -16,3 +16,4 @@ if [ "$TERM" = "screen" ]; then
     export TERM=screen-256color
 fi
 
+source /usr/share/doc/pkgfile/command-not-found.bash
