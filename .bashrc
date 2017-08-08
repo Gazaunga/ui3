@@ -17,3 +17,5 @@ if [ "$TERM" = "screen" ]; then
 fi
 
 source /usr/share/doc/pkgfile/command-not-found.bash
+
+shopt -s autocd
