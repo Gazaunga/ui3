@@ -92,6 +92,7 @@ terminus-font
 connman 
 wpa_supplican
 exa-git
+command-not-found
 )
 
 # You know the thing
